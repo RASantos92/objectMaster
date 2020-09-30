@@ -6,9 +6,9 @@ public class Human {
 	public Integer health;
 	public Integer str;
 	public Integer stealth;
-	public Integer intel; 
+	public Integer intel;
 	public Boolean attack;
-	
+
 	public Human(String name) {
 		this.name = name;
 		this.type = "Human";
@@ -17,8 +17,9 @@ public class Human {
 		this.stealth = 20;
 		this.intel = 20;
 		this.attack = true;
-		
+
 	}
+
 	public String getName() {
 		return name;
 	}
@@ -26,6 +27,7 @@ public class Human {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getType() {
 		return type;
 	}
@@ -33,6 +35,7 @@ public class Human {
 	public void setType(String type) {
 		this.type = type;
 	}
+
 	public Integer getHealth() {
 		return health;
 	}
@@ -40,6 +43,7 @@ public class Human {
 	public void setHealth(int health) {
 		this.health = health;
 	}
+
 	public Integer getStr() {
 		return str;
 	}
@@ -55,20 +59,30 @@ public class Human {
 	public void setIntel(int intel) {
 		this.intel = intel;
 	}
+
+	public void howMany() {
+		if(this.type == )
+		System.out.println("***************************"+"\n"+"There are ")
+	}
+
 	public String toString() {
 		String output = "";
 		output += "Name:        " + name + "\n";
 		output += "Type:        " + type + "\n";
 		output += "Health: 	    " + health + "\n";
-		output += "Streangth:   " + str +"\n";
+		output += "Streangth:   " + str + "\n";
 		output += "Stealth:     " + stealth + "\n";
 		output += "Inteligence: " + intel + "\n";
-		output += "Can attack?: " + (attack ? "yes" + "\n": "\n");
-		
+		output += "Can attack?: " + (attack ? "yes" + "\n" : "\n");
+
 		return output;
 	}
+
 	public void attack(Human player) {
 		player.setHealth(player.getHealth() - this.str);
+		System.out.println("***********************************" + "\n" + this.name + " Just attacked " + player.name
+				+ ". Delt " + this.str + " Damage" + "\n" + "***********************************");
+
 	}
-	
+
 }
