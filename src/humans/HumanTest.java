@@ -17,7 +17,17 @@ public class HumanTest {
 		player4.steal(player2);
 		player4.runAway();
 		player2.toString();
+
+		Samurai player5 = new Samurai("Kobiashi");
+		player5.deathBlow(player2);
+		player5.meditate();
+		player5.toString();
+		System.out.println(player5);
 		System.out.println(player2);
+		System.out.println(" Samurai count: " + Samurai.getNumberOfSamurai());
+		System.out.println(" Wizards count: " + Wizard.getNumberOfWizards());
+		System.out.println(" Ninjas count: " + Ninja.getNumberOfNinjas());
+		System.out.println(" Humans count: " + Samurai.getNumberOfHumans());
 
 	}
 }

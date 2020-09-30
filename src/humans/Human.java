@@ -1,6 +1,7 @@
 package humans;
 
 public class Human {
+	private static Integer numberOfHumans = 0;
 	public String name;
 	public String type;
 	public Integer health;
@@ -17,7 +18,12 @@ public class Human {
 		this.stealth = 20;
 		this.intel = 20;
 		this.attack = true;
+		numberOfHumans++;
 
+	}
+
+	public static Integer getNumberOfHumans() {
+		return numberOfHumans;
 	}
 
 	public String getName() {
@@ -60,10 +66,10 @@ public class Human {
 		this.intel = intel;
 	}
 
-	public void howMany() {
-		if(this.type == )
-		System.out.println("***************************"+"\n"+"There are ")
-	}
+//	public void howMany() {
+//		if(this.type == )
+//		System.out.println("***************************"+"\n"+"There are ")
+//	}
 
 	public String toString() {
 		String output = "";

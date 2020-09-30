@@ -1,6 +1,8 @@
 package humans;
 
 public class Ninja extends Human {
+	private static Integer numberOfNinja = 0;
+
 	public Ninja(String name) {
 		super(name);
 		this.type = "Wizard";
@@ -8,7 +10,12 @@ public class Ninja extends Human {
 		this.str = 90;
 		this.stealth = 120;
 		this.intel = 75;
+		numberOfNinja++;
 
+	}
+
+	public static Integer getNumberOfNinjas() {
+		return numberOfNinja;
 	}
 
 	public void steal(Human player) {
